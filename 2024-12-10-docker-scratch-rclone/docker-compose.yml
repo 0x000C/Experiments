@@ -1,0 +1,7 @@
+services:
+  rclone-scratch:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rclone-scratch:latest
+    command: ["version"]

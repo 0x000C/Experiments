@@ -1,0 +1,78 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime files
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+*.out
+*.o
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Python-specific
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Docker-specific
+*.swp
+.dockerignore
+docker-compose.override.yml
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.sublime-workspace
+*.sublime-project
+
+# System generated
+*.bak
+*.tmp
+*.orig
+
+# Backup files
+*.~*
+*~
+*.bak
+
+# Temporary files
+tmp/
+temp/
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# macOS generated files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux generated files
+*~
+.cache/
