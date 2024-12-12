@@ -4,4 +4,12 @@ services:
       context: .
       dockerfile: Dockerfile
     image: rclone-scratch:latest
-    command: ["version"]
+    command: ["serve", "http", "/config/", "--addr", ":8080", "--config", "/config/rclone.conf"]
+    ports:
+      - "8080:8080"
+    configs:
+      - source: rclone_config
+        target: /config/rclone.conf
+configs:
+  rclone_config:
+    file: ./rclone.conf
