@@ -4,7 +4,7 @@ Exploring multistage builds, deploying static binaries into a minimal `scratch` 
 
 This project downloads the latest rclone binary, creates an image with the binary, and runs the container.
 
-Currently it is configured to simply serve the rclone config directory and makes a config file available to the host for setting up remotes.
+Currently the container is configured to simply serve the rclone config directory and makes a config file available to the host for setting up remotes.
 
 ## Requirements
 - Docker
