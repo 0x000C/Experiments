@@ -14,6 +14,7 @@ Currently the container is configured to simply serve the rclone config director
 ## Usage
 - `make build`: Builds the Docker image.
 - `make run`: Runs the container using Docker Compose.
+- `make monitor`: Shows the logs of the running container.
 - `make stop`: Stops the running container.
 - `make clean`: Cleans up all project-related Docker resources.
 - `make restart`: Cleans, builds, and runs the container
