@@ -1,0 +1,15 @@
+services:
+  syslog-ng:
+    image: balabit/syslog-ng:latest
+#    ports:
+#      - "127.0.0.1:514:514/udp"
+#      - "127.0.0.1:601:601/tcp"
+#      - "127.0.0.1:6514:6514/tcp" #TLS 
+    volumes:
+      - ./logs:/var/log
+#    configs:
+#      - source: syslog-ng_config
+#        target: /etc/syslog-ng/syslog-ng.conf
+#configs:
+#  syslog-ng_config:
+#    file: ./syslog-ng.conf

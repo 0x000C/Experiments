@@ -1,8 +1,0 @@
-services:
-  syslog:
-    image: busybox:latest
-    command: ["syslogd", "-n", "-R", "0.0.0.0:514"]
-    ports:
-      - "127.0.0.1:514:514"
-    volumes:
-      - ./logs:/var/log
