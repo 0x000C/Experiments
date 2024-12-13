@@ -2,7 +2,10 @@ build:
 	docker compose build
 
 run:
-	docker compose up --force-recreate
+	docker compose up -d --force-recreate
+
+monitor:
+	docker compose logs -f
 
 stop:
 	docker compose down
