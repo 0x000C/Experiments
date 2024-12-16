@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frontend</title>
+  </head>
+  <body>
+    <h1>Frontend</h1>
+    <button id="add-time">Add Current Time</button>
+    <ul id="timestamps"></ul>
+    <script>
+      document.getElementById("add-time").onclick = async function () {
+        await fetch("/add-time", { method: "POST" });
+        const times = await (await fetch("/timestamps")).json();
+        const list = document.getElementById("timestamps");
+        list.innerHTML = times.map(time => `<li>${time}</li>`).join('');
+      };
+    </script>
+  </body>
+</html>
