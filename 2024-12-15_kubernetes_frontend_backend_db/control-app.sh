@@ -3,18 +3,18 @@
 case $1 in
   start)
     echo "Starting Kubernetes cluster..."
-    kubectl apply -f database/configmap.yaml
-    kubectl apply -f database/
-    kubectl apply -f backend/
-    kubectl apply -f frontend/
-    kubectl apply -f network-policy.yaml
+    sudo k3s kubectl apply -f database/configmap.yaml
+    sudo k3s kubectl apply -f database/
+    sudo k3s kubectl apply -f backend/
+    sudo k3s kubectl apply -f frontend/
+    sudo k3s kubectl apply -f network-policy.yaml
     ;;
   stop)
     echo "Stopping Kubernetes cluster..."
-    kubectl delete -f database/
-    kubectl delete -f backend/
-    kubectl delete -f frontend/
-    kubectl delete -f network-policy.yaml
+    sudo k3s kubectl delete -f database/
+    sudo k3s kubectl delete -f backend/
+    sudo k3s kubectl delete -f frontend/
+    sudo k3s kubectl delete -f network-policy.yaml
     ;;
   *)
     echo "Usage: $0 [start|stop]"
